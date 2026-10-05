@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "MD Web Audit",
+  "version": "0.1.0",
+  "description": "Audita la página que estás viendo desde un panel lateral con una Tab por tipo de auditoría. 100% local.",
+  "minimum_chrome_version": "116",
+  "permissions": ["debugger", "tabs", "scripting", "storage", "sidePanel"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "service-worker.js", "type": "module" },
+  "action": { "default_title": "MD Web Audit: abrir panel" },
+  "side_panel": { "default_path": "sidepanel/index.html" }
+}
