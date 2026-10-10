@@ -2,23 +2,21 @@
 
 | Campo | Valor |
 |---|---|
-| Actualizada | 2026-10-04 |
+| Actualizada | 2026-10-10 |
 | Agente | Codex |
 
 ## Dónde quedó
 
-SPEC-001 (Velocidad) en `awaiting-review`: la persona aprueba las pruebas manuales T-10 y AC-01 a AC-09. Corregida T-11: las actualizaciones de las mediciones ya no reemplazan el selector de ordenación ni el buscador; comprobados controles estables, ordenación por peso y duración, búsqueda y filtros en una prueba local de navegador con estados simulados cada 100 ms. Falta revisar esta corrección en la extensión recargada.
+SPEC-007 (Accesibilidad) implementada y en `awaiting-review`, con todos sus criterios y tareas verificados. Motor axe-core 4.14.0 empaquetado localmente, categorías separadas, filtros, contraste, nombres accesibles y localización sin alterar estilos. Pruebas completas en Google Chrome 155.0.8059.39, 7 comprobaciones de captura y revisión visual independiente; evidencias en `tests/accesibilidad/resultado.json` y capturas finales. La traducción respeta CSP MV3 sin evaluación de código.
 
-SPEC-002 (SEO) sigue en `in-progress`: implementadas T-01 a T-10 y T-12; falta T-11 y comprobar AC-01 a AC-13 en Chrome. SPEC-003 (Consola) sigue en `in-progress`: implementadas T-01 a T-09; falta T-10 y comprobar AC-01 a AC-12. SPEC-004 (Contenido) sigue en `in-progress`: implementadas T-01 a T-07 y comprobados AC-01 a AC-06 en página de prueba; falta T-08 y comprobar AC-07 a AC-11 en Chrome.
-
-ADR-001 sigue en `proposed`; SPEC-005 a SPEC-015 en `backlog`. Onboarding de Git y Diseño pendiente.
+Onboarding de Git y Diseño completado; sistema conservado con radios extraídos a variables CSS. SPEC-001 está en `done`; SPEC-002 conserva AC-01 verificado por la persona y tiene otras pruebas pendientes, al igual que SPEC-003 y SPEC-004. Revisados y archivados los avisos de SPEC-002 y SPEC-007. ADR-001 y ADR-002 mantienen `proposed`, sin cambios automáticos a accepted. No se ha hecho commit ni push.
 
 ## Siguientes pasos
 
-1. Recargar la extensión en Chrome y revisar el selector «Más pesados» de SPEC-001; confirmar el cierre de la spec.
-2. Completar las pruebas manuales pendientes de SEO, Consola y Contenido.
-3. Revisar ADR-001 y completar el onboarding de Git y Diseño.
+1. Revisar Accesibilidad en la extensión recargada y confirmar el cierre de SPEC-007.
+2. Completar las pruebas pendientes de SEO, Consola y Contenido.
+3. Revisar formalmente ADR-001 y ADR-002.
 
 ## Bloqueos
 
-Ninguno.
+Ninguno para la implementación. SPEC-007 espera revisión de la persona.

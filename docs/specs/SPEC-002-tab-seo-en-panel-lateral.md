@@ -6,7 +6,7 @@
 | Autor | Claude Code |
 | Propietario | Marcos |
 | Creada | 2026-10-03 |
-| Actualizada | 2026-10-03 |
+| Actualizada | 2026-10-10 |
 | Objetivo de release | 0.1.0 |
 | Dependencias | SPEC-001, ADR-001 |
 
@@ -59,7 +59,7 @@ Misma persona y permisos que SPEC-001. Se usa `chrome.scripting` para leer el DO
 
 ## 7. Criterios de aceptación
 
-- [ ] AC-01 · En una página con title y description, ambos aparecen con su longitud y el indicador de rango correcto (FR-02, FR-03).
+- [x] AC-01 · En una página con title y description, ambos aparecen con su longitud y el indicador de rango correcto (FR-02, FR-03).
 - [ ] AC-02 · En una página sin description, se muestra el aviso de que falta (FR-03).
 - [ ] AC-03 · En una página con `<meta name="robots" content="noindex">` el veredicto es «Bloqueada» y la señal lo indica; en una página normal es «Indexable» (FR-04).
 - [ ] AC-04 · Una página con canonical a otra URL muestra la señal con la URL destino (FR-04).
@@ -138,3 +138,5 @@ extension/tabs/seo/
 | 2026-10-03 | `in-progress` | Revisados cambios de la persona: aprobación de la spec (luz verde para implementar) |
 | 2026-10-03 | `in-progress` | Implementadas T-01 a T-10 en `extension/tabs/seo/` y README actualizado. Probado fuera del panel: lógica de indexabilidad (veredicto, robots.txt, X-Robots-Tag, canonical), extracción de DOM y schemas, y resaltado sin cambio de layout. Fetch HEAD y robots.txt se hacen desde el panel (no desde el service worker). Falta T-11: prueba manual de los AC-01 a AC-13 en Chrome |
 | 2026-10-03 | `in-progress` | Petición de la persona: añadidos FR-13, AC-14 y T-12 (comprobar robots.txt, sitemap y llms.txt con enlace en pestaña nueva). T-12 implementada en `archivos.js` y probada con `fetch` simulado (declarado, ruta habitual, 200 con HTML, sin red); AC-14 pendiente de prueba manual en T-11 |
+
+| 2026-10-10 | `in-progress` | Revisados cambios de la persona: AC-01 marcado desde MD SDD Hub. Se conserva la verificación aportada; las demás pruebas pendientes mantienen sus casillas. |

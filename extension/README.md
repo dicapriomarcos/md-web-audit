@@ -26,3 +26,13 @@ Mientras el panel esté abierto se mide la pestaña activa y Chrome muestra el a
 2. Añade una línea en `tabs/registro.js`.
 
 Más detalle en `docs/architecture/ADR-001-panel-lateral-y-modulos-por-tab.md`.
+
+## Accesibilidad
+
+La pestaña **Accesibilidad** analiza la página activa con axe-core local. Separa problemas detectados, revisión manual y recomendaciones; muestra gravedad, regla, criterio WCAG y contraste cuando está disponible. Los contadores distinguen reglas e incidencias en elementos; un elemento puede aparecer en varias reglas.
+
+Usá los filtros de categoría y gravedad. Abrí una regla y pulsá **Localizar y resaltar** para encontrar un elemento; **Quitar resaltado** retira la capa. **Volver a analizar** actualiza los resultados después de abrir menús, diálogos o cambiar contenido. También se vuelve a analizar al navegar o cambiar de pestaña.
+
+No certifica conformidad ni sustituye pruebas con teclado y lectores de pantalla. Analiza el documento principal y Shadow DOM abierto, sin iframes, Shadow DOM cerrado ni contenido oculto. Solo admite páginas HTTP/HTTPS donde Chrome permita la inyección. Muestra hasta 100 elementos por regla, conservando el total real.
+
+El motor y su traducción están empaquetados en `vendor/axe-core/`, con versión, procedencia y licencia. La auditoría no descarga código ni envía DOM, URL o resultados a servidores. Los resaltados no modifican los estilos originales y se retiran al navegar o cerrar el panel.

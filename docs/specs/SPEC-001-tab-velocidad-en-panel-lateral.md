@@ -6,7 +6,7 @@
 | Autor | Claude Code |
 | Propietario | Marcos |
 | Creada | 2026-10-03 |
-| Actualizada | 2026-10-04 |
+| Actualizada | 2026-10-10 |
 | Objetivo de release | 0.1.0 |
 | Dependencias | ADR-001 |
 
@@ -129,4 +129,5 @@ extension/
 | 2026-10-03 | `in-progress` | Implementadas T-01 a T-09 (esqueleto, shell con Tabs, captura, vista, controles, tema). Sintaxis y score comprobados con Node; falta la prueba manual en Chrome (T-10) |
 | 2026-10-04 | `awaiting-review` | La persona confirma la aprobación de las pruebas manuales de SPEC-001 (T-10 y AC-01 a AC-09). Corregida T-11: el selector y el buscador conservan sus nodos durante las actualizaciones. Verificación local en navegador con estados simulados cada 100 ms: 120 actualizaciones sin reemplazar controles; ordenación por peso y duración, búsqueda y filtro por tipo correctos. Sintaxis comprobada con Node. Corrección pendiente de revisión en la extensión recargada. |
 | 2026-10-04 | `done` | Cambio de estado desde MD SDD Hub (awaiting-review → done) |
+| 2026-10-10 | `done` | Revisados cambios de la persona: T-10 y cierre aprobados desde MD SDD Hub; casillas y registro coherentes, sin cambios de código. |
 

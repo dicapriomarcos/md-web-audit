@@ -32,3 +32,7 @@ La persona ha cambiado el estado: `awaiting-review` → `done`
   
   
 ```
+
+## Resultado de la revisión
+
+Revisión de 2026-10-10: la persona aprobó T-10 y cerró SPEC-001 desde MD SDD Hub. Las casillas del documento actual y el registro son coherentes con `done`. Se respeta el cierre y se registra esta revisión. Sin cambios de código ni preguntas abiertas.
