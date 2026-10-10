@@ -1,5 +1,6 @@
 /* Shell del panel y estilos de las Tabs (Velocidad, SEO). Tema claro/oscuro según el sistema. */
 :root {
+  --radio-control: 6px; --radio-tarjeta: 8px;
   --bg: #ffffff; --card: #f6f7f9; --fg: #1a1a1a; --mut: #6b7280; --bd: #e2e4e8;
   --bar: #3b82f6; --suave: #3b82f624; --mal: #ff4e42;
   color-scheme: light dark;
@@ -28,7 +29,7 @@ nav button[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--
 #aviso button { margin-left: 6px; }
 main { flex: 1; overflow: auto; padding: 8px; }
 
-button, select, input { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--bd); border-radius: 6px; padding: 3px 8px; cursor: pointer; }
+button, select, input { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--bd); border-radius: var(--radio-control); padding: 3px 8px; cursor: pointer; }
 input[type=text], input:not([type]) { cursor: text; }
 input[type=checkbox] { padding: 0; }
 
@@ -37,7 +38,7 @@ input[type=checkbox] { padding: 0; }
 .ctl label { display: flex; gap: 4px; align-items: center; color: var(--mut); }
 .espacio { flex: 1; }
 .estado { color: var(--mut); font-size: 11.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.tarjeta { background: var(--card); border: 1px solid var(--bd); border-radius: 8px; padding: 8px; }
+.tarjeta { background: var(--card); border: 1px solid var(--bd); border-radius: var(--radio-tarjeta); padding: 8px; }
 h2 { font-size: 11px; margin: 0 0 5px; color: var(--mut); text-transform: uppercase; letter-spacing: .04em; }
 #hist { max-height: 130px; overflow: auto; }
 .h { display: grid; grid-template-columns: 24px 1fr 34px 58px; gap: 6px; align-items: center; padding: 3px 5px; border-radius: 5px; cursor: pointer; }
@@ -137,3 +138,20 @@ details.tarjeta summary { cursor: pointer; } details.tarjeta summary h2 { displa
 .aviso-sh { background: var(--card); border: 1px solid var(--bd); border-radius: 6px; padding: 6px 8px; }
 .archivo { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 4px 0; border-bottom: 1px solid var(--bd); }
 .archivo b { min-width: 74px; } .archivo a { margin-left: auto; color: var(--bar); }
+
+/* Tab Accesibilidad: controles estables y detalle accesible con teclado. */
+.acc { display: grid; gap: 8px; align-content: start; }
+.acc p { margin: 4px 0; }
+.acc-url { overflow-wrap: anywhere; color: var(--mut); }
+.acc-estado { overflow-wrap: anywhere; }
+.acc-totales { display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); }
+.acc-totales b { font-size: 18px; font-variant-numeric: tabular-nums; }
+.acc-totales b, .acc-totales span, .acc-totales small { display: block; }
+.acc-lista { display: grid; gap: 8px; }
+.acc-regla summary { cursor: pointer; overflow-wrap: anywhere; }
+.acc-regla summary span { display: block; color: var(--mut); margin-top: 4px; }
+.acc-nodo { padding: 8px 0; border-top: 1px solid var(--bd); overflow-wrap: anywhere; }
+.acc-nodo code, .acc-nodo small { display: block; white-space: pre-wrap; overflow-wrap: anywhere; }
+.acc :is(button, select, summary):focus-visible { outline: 2px solid var(--bar); outline-offset: 2px; }
+.acc button:disabled { opacity: .6; cursor: default; }
+.acc button:not(:disabled):hover { background: var(--suave); }

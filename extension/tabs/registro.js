@@ -5,5 +5,6 @@ import velocidad from './velocidad/index.js';
 import seo from './seo/index.js';
 import consola from './consola/index.js';
 import contenido from './contenido/index.js';
+import accesibilidad from './accesibilidad/index.js';
 
-export const TABS = [velocidad, seo, consola, contenido];
+export const TABS = [velocidad, seo, consola, contenido, accesibilidad];

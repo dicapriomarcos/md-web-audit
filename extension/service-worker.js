@@ -38,6 +38,8 @@ chrome.runtime.onConnect.addListener(port => {
 
 chrome.tabs.onActivated.addListener(({ windowId }) => { if (sesion?.windowId === windowId) seguirActiva(); });
 chrome.tabs.onUpdated.addListener((id, info, tab) => {
+  // Una recarga de la misma URL también invalida los resultados de accesibilidad.
+  if (sesion && tab.active && tab.windowId === sesion.windowId && info.status === 'loading') capturas.accesibilidad?.seguir(tab);
   if (sesion && tab.active && tab.windowId === sesion.windowId && (info.url || info.status === 'complete')) seguirActiva();
 });
 
