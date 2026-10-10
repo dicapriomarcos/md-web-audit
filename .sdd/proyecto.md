@@ -3,18 +3,18 @@
 | Campo | Valor |
 |---|---|
 | Nombre | MD Web Audit |
-| Descripción | Extensión de Chrome (Manifest V3) para auditar páginas web desde un panel lateral con una Tab por tipo de auditoría. La primera es Velocidad. |
-| Stack | JavaScript puro (módulos ES), Chrome Extensions MV3, `chrome.sidePanel`, `chrome.debugger`. Sin build ni dependencias. |
+| Descripción | Extensión de Chrome (Manifest V3) para auditar páginas web desde un panel lateral con una Tab por tipo de auditoría. Accesibilidad (SPEC-007) identifica problemas automáticos WCAG A/AA, revisión manual y recomendaciones, con localización de elementos y procesamiento local. |
+| Stack | JavaScript puro (módulos ES), Chrome Extensions MV3, `chrome.sidePanel`, `chrome.debugger`. Sin build; axe-core empaquetado localmente para Accesibilidad. |
 | Despliegue | Carga descomprimida en `chrome://extensions` (modo desarrollador). Publicación en Chrome Web Store por definir. |
-| Actualizada | 2026-10-03 |
+| Actualizada | 2026-10-10 |
 
 ## Onboarding
 
 | Paso | Estado |
 |---|---|
 | Ficha | ✅ |
-| Git | Pendiente |
-| Diseño | Pendiente |
+| Git | ✅ |
+| Diseño | ✅ |
 | Decisiones existentes | No aplica |
 
 ## Comandos

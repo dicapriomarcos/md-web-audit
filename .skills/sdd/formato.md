@@ -10,6 +10,7 @@
   - `slug`: en español, en minúsculas, sin tildes ni eñes, palabras separadas por guiones, unas 6 palabras como máximo (p. ej. `exportar-informes-en-pdf`).
 - Plantilla: `<carpeta>/000-TEMPLATE.md` si existe; si no, la de [`plantillas/`](plantillas/) para ese tipo.
 - Registro: `<carpeta>/README.md`, con una tabla bajo `## Registro` (ver [`registro.md`](registro.md)).
+- El **sistema de diseño** vive en `<carpeta de diseño>/sistema/` y tiene su propio formato, sin ID ni estado: ver [`sistema-diseno.md`](sistema-diseno.md).
 
 ## Estructura obligatoria
 
@@ -70,3 +71,7 @@ Todos los tipos terminan con `## Historial`:
 ```
 
 Las casillas (`- [ ]` / `- [x]`) se reservan para `AC-NN` y `T-NN`. No uses casillas para otras listas: la herramienta las cuenta como progreso.
+
+## Capturas pendientes de planificación
+
+Las features creadas desde una descripción pueden usar título «Sin título» y slug provisional `sin-titulo`, metadatos, descripción e historial, sin las secciones completas todavía. Llevan `<!-- sdd-hub:needs-planning -->` hasta que la IA complete título, slug y planificación. Sigue [`planificacion.md`](planificacion.md) para convertirlas en una spec completa conservando su ID y descripción original.

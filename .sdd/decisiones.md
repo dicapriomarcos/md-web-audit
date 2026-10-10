@@ -8,10 +8,14 @@
 
 ## Interfaz
 
+- 2026-10-10 · Sigue el sistema de diseño: lee docs/design/sistema/index.md y solo las partes que toques.
+
 ## Código
 
 - 2026-10-03 · Cada Tab de auditoría es un módulo independiente en `extension/tabs/<nombre>/`; JavaScript puro sin build → ADR-001
 
 ## Proceso
+
+- 2026-10-10 · Haz commits en español y realiza commits o push solo cuando la persona lo pida; identidad y remotes en .sdd/git.md.
 
 - 2026-10-03 · Responde, escribe los documentos y comenta el código siempre en español.
